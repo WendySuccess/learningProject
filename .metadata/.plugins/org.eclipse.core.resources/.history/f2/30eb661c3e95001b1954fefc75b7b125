@@ -1,0 +1,15 @@
+import java.util.*;  
+public class ArithmeticCalculator {
+	public static void main(String[] args) {
+		
+	Scanner sc= new Scanner(System.in); 
+	System.out.print("Enter a first number: ");  
+	double  num1 = sc.nextDouble();              //reads first number 
+	
+	System.out.print("Enter a second number: ");  
+	double  num2 = sc.nextDouble();     
+	System.out.println("You have entered: "+num1+ "\n" );  
+	System.out.println("You have entered: "+num2+ "\n" );  
+
+}
+}

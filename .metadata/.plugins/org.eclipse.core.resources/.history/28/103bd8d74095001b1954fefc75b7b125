@@ -1,0 +1,38 @@
+import java.util.*;  
+public class ArithmeticCalculator {
+	
+	private static double num1;
+	private static double num2; 
+	private static char ope ;
+	
+	public static void main(String[] args) {
+		
+	Scanner sc= new Scanner(System.in); 
+	System.out.print("Enter a first number: ");  
+	num1 = sc.nextDouble(); 
+	
+	System.out.print("Enter a second number: ");  
+	num2 = sc.nextDouble();     
+
+	System.out.print("Choose a operation (+, -, *, /) : "); 
+	ope = sc.next().charAt(0);
+	
+	
+	
+	calculator obj = new calculator();
+	obj.display(num1,num2,ope);
+
+}
+	
+	
+}
+
+class calculator {
+	
+	void display(double num1 , double num2 , char operator) {
+		System.out.print("You have entered: "+num1+ "\n" );  
+		System.out.print("You have entered: "+num2+ "\n" );  
+		System.out.print("You have entered: "+operator+ "\n" );  
+	}
+	
+}
