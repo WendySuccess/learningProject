@@ -1,0 +1,23 @@
+
+public class AccessModifiers {
+	public static void main(String[] args) {
+		testprivate();
+		testpublic();
+		testprotected();
+	}
+	
+	private static String testprivate() {
+		String a = "test";
+		return a;
+	}
+	
+	public static  String testpublic() {
+		String a = "test";
+		return a;
+	}
+	
+	protected static  String testprotected() {
+		String a = "test";
+		return a;
+	}
+}
