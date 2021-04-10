@@ -18,7 +18,6 @@ public class EmailValidation {
 		{
 			System.out.println( search + " not existed in list.");
 			System.out.println( );
-			System.out.println( " Please try again.");
 		}
 		
 		Retry() ;
