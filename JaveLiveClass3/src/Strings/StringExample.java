@@ -6,7 +6,7 @@ public class StringExample {
 		String str1 = "Noah";
 		String str2 = new String ("Args");
 		
-		char[] ch = {'a', 'k', 'a'};
+		char[] ch = {'a', 'k', 'a', '5'};
 		String s = new String (ch);
 		
 		System.out.println(s);

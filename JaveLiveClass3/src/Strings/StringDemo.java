@@ -5,7 +5,7 @@ public class StringDemo{
 		String test = "ABC";
 		
 		System.out.println("CharAt 2 " + test.charAt(2));
-		System.out.println("compareTo ABCD " + test.compareTo("ABz"));
+		System.out.println("compareTo ABz " + test.compareTo("ABz"));
 		System.out.println("concat 123 " + test.concat("123"));
 		System.out.println("substring " + test.substring(2));
 		
@@ -14,6 +14,7 @@ public class StringDemo{
 		
 		StringBuilder sb = new StringBuilder();
 		sb.append("This is a builder");
+		sb.reverse();
 		System.out.println(sb);
 	}
 	
