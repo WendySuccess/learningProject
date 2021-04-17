@@ -15,14 +15,23 @@ public class ExampleSynchonizationThread implements Runnable{
 		i = 0;
 		synchronized(Lock1)
 		{
-		while (true) {
-			System.out.println("This is Synchonize " + Test + " "+ i ++);
-			if (i ==50) {
-				break;
-				
-			}
+			System.out.println("This is Synchonize " + Test + " ");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
 			
-		}
+			System.out.println("This is Synchonize " + Test + "Done");
+//		while (true) {
+//			System.out.println("This is Synchonize " + Test + " "+ i ++);
+//			if (i ==50) {
+//				break;
+//				
+//			}
+//			
+//		}
 		}
 		
 	}
