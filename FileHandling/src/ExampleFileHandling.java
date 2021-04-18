@@ -1,10 +1,12 @@
-import java.io.File;
+
 import java.util.Scanner;
 
 
 public class ExampleFileHandling {
 	static Scanner sc= new Scanner(System.in); 
 	public static void main (String[] args) {
+		System.out.println("- Welcome to Log Management - ");
+		System.out.println();
 		KeyIn();
 		
 		
@@ -13,26 +15,29 @@ public class ExampleFileHandling {
 	public static void KeyIn() {	
 		System.out.println("Please Select the action you prefer. A,B or C");  
 		System.out.println("1. read the Log File - A");  
-		System.out.println("2. write the log file - B");  
+		System.out.println("2. Overwrite the log file - B");  
 		System.out.println("3. Append the log file - C");  
-		
+		System.out.println();
 		char res = sc.next().charAt(0); 
 		
 		LogFile obj = new LogFile();
 		
 		switch (res )
 		{
-		case 'A':
+		case 'A' :case 'a' :case '1' :
 			obj.readFile();
-		case 'B':
+		    break;
+		case 'B' :case 'b' :case '2' :
 			obj.writeFile();
-		case 'C':
+		    break;
+		case 'C' :case 'c' :case '3' :
 			obj.appendFile() ;
+		    break;
 		default: 
 			//System.out.println("Invalid selection.");  
-			Retry();
+			
 		}
-		
+		Retry();
 	}
 	
 	public static void Retry() {		
