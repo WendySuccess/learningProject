@@ -13,6 +13,7 @@ public class ExampleFileHandling {
 	}
 	
 	public static void KeyIn() {	
+		System.out.println("---------------------------------------------");
 		System.out.println("Please Select the action you prefer. A,B or C");  
 		System.out.println("1. read the Log File - A");  
 		System.out.println("2. Overwrite the log file - B");  
