@@ -14,17 +14,19 @@ public class LinearSearch {
 		 search(Arr  ,9022  );
 	}
 	
-	static void search(int[] Arr ,int searchint) {
+	static int search(int[] Arr ,int searchint) {
 		boolean check = false ;
 		   for(int i = 0 ; i <Arr.length ; i ++) {  	
 		if(Arr[i] == searchint) {
 			 System.out.println("The number " +  searchint + " at number " + (i +1) + " of the array" );
 			 check = true;
+			 return i;
 		}
 		
 	}
 		   if (check == false)
 				System.out.println("The number " +  searchint + " at number is not found in the array" );
+		   return -1;
 
 }
 	
