@@ -77,7 +77,7 @@ public class CircularLinkList {
 			 return;
 		 }
 		 
-		 System.out.println("Node of singly linked list");
+		 System.out.println("Node of singly Circular list");
 		 
 		 Node temp = head ;
 		do{
