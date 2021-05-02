@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
@@ -156,9 +157,12 @@ public class Repositories {
 	}
 	
 	public void seachfile(File dir) {
-		System.out.println("please key in file name to Search"); 
+		System.out.print("please key in file name to Search : "); 
 		String resFileToSearch = sc.nextLine(); 
-		checkfile(dir , resFileToSearch) ;		
+		int found = checkfile(dir , resFileToSearch) ;	
+		if (found == 1) {
+			readFile(dir,resFileToSearch);
+		}
 	}
 	
 	public int checkfile(File dir , String ToSearch) {
@@ -194,7 +198,7 @@ public class Repositories {
 				start = mid +1;
 			}else if(Arr[mid].compareTo(searchint) ==0)
 			{
-				System.out.println(" File " + Arr[mid] + "found!" );
+				System.out.println(" File " + Arr[mid] + " found!" );
 				found = 1;
 				break;
 			}else
@@ -210,6 +214,29 @@ public class Repositories {
 	}
 	private static int mid(int first , int last ) {
 				return (first + last)/2;
+	}
+	
+	void readFile(File dir,String filename){
+		String s; 
+	
+		try (BufferedReader in1 = new BufferedReader(new FileReader(dir.getAbsolutePath() + "/" +filename))) {
+			System.out.println("File name :" + filename);
+			s = in1.readLine();
+			System.out.println();
+			System.out.println( "- Start of the file -");
+			while (s !=null) {
+				System.out.println( s);
+				s = in1.readLine();
+			}
+			System.out.println( "- End of the file -");
+			System.out.println();
+		}catch (FileNotFoundException e) {
+			System.out.println("Not File found.");
+
+		} catch (Exception e) {
+			System.out.println(e);
+		} 
+				
 	}
 	
 }

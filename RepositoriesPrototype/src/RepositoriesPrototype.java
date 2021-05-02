@@ -101,7 +101,7 @@ public class RepositoriesPrototype {
 			ExitProgram();
 		    break;
 		default: 
-			//System.out.println("Invalid selection.");  
+			System.out.println("Invalid selection.");  
 			
 		}
 		Retry(obj, res);
