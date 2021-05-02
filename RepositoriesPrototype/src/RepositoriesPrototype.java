@@ -17,11 +17,12 @@ public class RepositoriesPrototype {
 		System.out.println("*************************File Repositories Management System*************************");
 		System.out.println("                              Company Lockers Pvt. Ltd.                             ");
 		System.out.println("                              Developer: Soon Ming Poo                              ");
-		System.out.println("*************************************************************************************");
-		System.out.println();
+
 	}
 	
-	public static void Menu(Repositories obj ) {	
+	public static void Menu(Repositories obj ) {
+		System.out.println("*************************************************************************************");
+		System.out.println();
 		obj.viewAllfile(currentDir);
 		System.out.println("*********************************** Main Menu ***************************************");
 		System.out.println("1. Add New File ");  
@@ -39,10 +40,10 @@ public class RepositoriesPrototype {
 			obj.addfile(currentDir);
 		    break;
 		case '2' :
-			obj.deletefile();
+			obj.deletefile(currentDir);
 		    break;
 		case '3' :
-			obj.seachfile() ;
+			obj.seachfile(currentDir) ;
 		    break;
 		case '4' :
 			ExitProgram();
@@ -84,10 +85,10 @@ public class RepositoriesPrototype {
 				obj.addfile(currentDir);  
 			    break;
 			case '2' :
-				obj.deletefile();
+				obj.deletefile(currentDir);
 			    break;
 			case '3' :
-				obj.seachfile() ;
+				obj.seachfile(currentDir) ;
 			    break;
 			default: 
 				System.out.println("Invalid selection.");  	

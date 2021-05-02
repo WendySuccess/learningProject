@@ -3,6 +3,10 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.DirectoryNotEmptyException;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class Repositories {
@@ -26,6 +30,7 @@ public class Repositories {
 	    	System.out.println("File Repository not been setup. Kindly check with admin.");
 	    }
 	}
+	
 	
 	private void printFileList(String[] arr) {
 		int n = arr.length;
@@ -110,7 +115,7 @@ public class Repositories {
 				  newdata  = originaldata + res + System.lineSeparator();
 			  fout.write( newdata.getBytes());
 			  System.out.println("Success Added."); 
-	
+			  System.out.println();
 			} catch (IOException eX2) {
 					eX2.printStackTrace();
 		}
@@ -118,11 +123,93 @@ public class Repositories {
 		
 	}
 	
-	public void deletefile() {
-		
+	public void deletefile(File dir) {
+		viewAllfile(dir);
+		System.out.println("please key in file name to delete"); 
+		String resFileToDelete = sc.nextLine(); 
+		int found = 0; 
+		int status = 0 ;
+		found = checkfile(dir , resFileToDelete) ;		
+		if (found == 1) {
+        try
+        { 
+            Files.delete(Paths.get(dir.getAbsolutePath() + "/"+ resFileToDelete)); 
+        } 
+        catch(NoSuchFileException e) 
+        { 
+            System.out.println("No such file exists"); 
+            status = 1;
+        } 
+        catch(DirectoryNotEmptyException e) 
+        { 
+            System.out.println("Directory is not empty."); 
+            status = 1;
+        } 
+        catch(IOException e) 
+        { 
+            System.out.println("Invalid permissions."); 
+            status = 1;
+        } 
+          if( status == 0)
+        System.out.println("Deletion successful."); }
+
 	}
 	
-	public void seachfile() {
+	public void seachfile(File dir) {
+		System.out.println("please key in file name to Search"); 
+		String resFileToSearch = sc.nextLine(); 
+		checkfile(dir , resFileToSearch) ;		
+	}
+	
+	public int checkfile(File dir , String ToSearch) {
+		int found =0;
+		try {
+			File[] files = dir.listFiles();
+			int n = files.length;
+			String[] filesNames = new String [n];
+			int i = 0 ; 
+			
+			for (File file : files) {
+	               filesNames[i] = file.getName();
+	               i ++;
+	            } 	
+			sort(filesNames,0,n-1);
+			found =search(filesNames ,ToSearch ) ;
+	    }catch (NullPointerException ex) {
+	    	System.out.println("File Repository not been setup. Kindly check with admin.");
+	    }
+		return found ;
+
+	}
+	
+	private static int search(String[] Arr ,String searchint) {
+		int start = 0;
+		int length = Arr.length;
+		int mid = mid(start, length);
+		int found = 0 ;
+		
+		while(start  <= length ) {
+			//System.out.println(start + " "+ mid + Arr[mid]);
+			if(Arr[mid].compareTo(searchint)<0) {
+				start = mid +1;
+			}else if(Arr[mid].compareTo(searchint) ==0)
+			{
+				System.out.println(" File " + Arr[mid] + "found!" );
+				found = 1;
+				break;
+			}else
+			{
+				length = mid -1;
+			}
+			mid = mid(start, length);
+		}
+		if (found == 0)
+			System.out.println("No such file exists!");
+		return found;
 		
 	}
+	private static int mid(int first , int last ) {
+				return (first + last)/2;
+	}
+	
 }
