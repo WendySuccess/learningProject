@@ -17,6 +17,7 @@ public class RepositoriesPrototype {
 		System.out.println("*************************File Repositories Management System*************************");
 		System.out.println("                              Company Lockers Pvt. Ltd.                             ");
 		System.out.println("                              Developer: Soon Ming Poo                              ");
+		System.out.println("                          Email : soonmingpoodev@yahoo.com                          ");
 
 	}
 	
