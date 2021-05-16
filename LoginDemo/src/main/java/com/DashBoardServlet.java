@@ -30,17 +30,19 @@ public class DashBoardServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
         PrintWriter out = response.getWriter();
+        response.setContentType("text/html");
+        
         out.println("<html><body>");
         out.println("<center><h1>Dashboard</h1></center>");
         HttpSession session=request.getSession(false);  
         String userId = null;
-        if(session !=null) {
+    
         if (session.getAttribute("userid") != null)
-            userId =(String)session.getAttribute("userid");  }
+            userId =(String)session.getAttribute("userid");  
         if (userId == null ) {
         	System.out.println("test");
             out.println("No UserId was found in session.<br>");
-            out.println("<a href='login.html'>Back to Login Page</a><br>");
+            out.println("<a href='index.html'>Back to Login Page</a><br>");
         } else {
             out.println("Welcome back, " + userId + "<br>");
             out.println("<a href='LogoutServlet'>Click here to Logout</a><br>");

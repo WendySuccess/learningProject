@@ -32,7 +32,7 @@ public class LogoutServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
         out.println("<center>Logged out of session.<br></center>");
-        out.println("<center><a href='login.html'>Back to Login Page</a><br></center>");
+        out.println("<center><a href='index.html'>Back to Login Page</a><br></center>");
         out.println("</body></html>");
 
 	}

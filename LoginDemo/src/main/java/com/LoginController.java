@@ -28,10 +28,12 @@ public class LoginController extends HttpServlet {
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
 		String emailID=request.getParameter("emailID");
 		String password=request.getParameter("password");
 		
 		RequestDispatcher rd = null;
+		if (emailID != null) {
 		if(emailID.equalsIgnoreCase("admin@yahoo.com")&& password.equals("admin123")) {
 			String email_ID = request.getParameter("emailID");
             HttpSession session=request.getSession();  
@@ -39,10 +41,14 @@ public class LoginController extends HttpServlet {
 			rd=request.getRequestDispatcher("DashBoardServlet");
 			rd.forward(request,response);
 		}else {
-			rd=request.getRequestDispatcher("login.html");
+			rd=request.getRequestDispatcher("index.html");
 			PrintWriter out=response.getWriter();
 			rd.include(request, response);
 			out.println("<center><span style='color:red'>Invalid username or password!</span></center>");
+		}} else
+		{
+			rd=request.getRequestDispatcher("index.html");
+			rd.forward(request,response);
 		}
 	}
 
