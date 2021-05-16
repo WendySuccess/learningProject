@@ -28,21 +28,21 @@ public class LoginController extends HttpServlet {
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String username=request.getParameter("username");
+		String emailID=request.getParameter("emailID");
 		String password=request.getParameter("password");
 		
 		RequestDispatcher rd = null;
-		if(username.equalsIgnoreCase("tom")&& password.equals("jerry")) {
-			String userId = request.getParameter("username");
+		if(emailID.equalsIgnoreCase("admin@yahoo.com")&& password.equals("admin123")) {
+			String email_ID = request.getParameter("emailID");
             HttpSession session=request.getSession();  
-            session.setAttribute("userid",  userId);
+            session.setAttribute("userid",  email_ID );
 			rd=request.getRequestDispatcher("DashBoardServlet");
 			rd.forward(request,response);
 		}else {
 			rd=request.getRequestDispatcher("login.html");
 			PrintWriter out=response.getWriter();
 			rd.include(request, response);
-			out.println("<center><span style='color:red'>Invalid credentials!</span></center>");
+			out.println("<center><span style='color:red'>Invalid username or password!</span></center>");
 		}
 	}
 

@@ -31,24 +31,21 @@ public class DashBoardServlet extends HttpServlet {
 		
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        
+        out.println("<center><h1>Dashboard</h1></center>");
         HttpSession session=request.getSession(false);  
         String userId = null;
+        if(session !=null) {
         if (session.getAttribute("userid") != null)
-            userId =(String)session.getAttribute("userid");  
+            userId =(String)session.getAttribute("userid");  }
         if (userId == null ) {
+        	System.out.println("test");
             out.println("No UserId was found in session.<br>");
+            out.println("<a href='login.html'>Back to Login Page</a><br>");
         } else {
-            out.println("UserId obtained from session :" + userId + "<br>");
-            out.println("<a href='LogoutServlet'>Logout of session</a><br>");
+            out.println("Welcome back, " + userId + "<br>");
+            out.println("<a href='LogoutServlet'>Click here to Logout</a><br>");
         }
         out.println("</body></html>");
-
-		
-		
-//		PrintWriter out=response.getWriter();
-//		out.print("<h4> Welcome " + request.getParameter("username")
-//				+" Login Successful at " + new Date() + "</h4>");
 	}
 
 }
