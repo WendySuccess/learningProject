@@ -33,3 +33,4 @@
 2021-05-30 08:42:01,599 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2021-05-30 18:53:58,673 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2021-05-30 18:58:24,305 [Worker-3: Debug Source Lookup] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-util/9.0.46/tomcat-util-9.0.46-sources.jar
+2021-05-30 18:58:24,961 [Worker-3: Debug Source Lookup] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-util/9.0.46/tomcat-util-9.0.46-sources.jar
