@@ -2,5 +2,9 @@
 <workingSetManager>
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1596023262901_0" label="Java Main Sources" name="Java Main Sources"/>
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1596023262945_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1622905034012_3" label="SpringHibernateExample" name="SpringHibernateExample">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SpringHibernateExample" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/FlyAwayProject" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1596023265716_2" label="Window Working Set" name="Aggregate for window 1596023265716"/>
 </workingSetManager>

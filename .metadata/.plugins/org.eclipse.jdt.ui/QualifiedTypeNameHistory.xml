@@ -8,4 +8,10 @@
     <fullyQualifiedTypeName name="java.nio.file.DirectoryNotEmptyException"/>
     <fullyQualifiedTypeName name="java.nio.file.Paths"/>
     <fullyQualifiedTypeName name="com.ecommerce.AddProduct"/>
+    <fullyQualifiedTypeName name="java.math.RoundingMode"/>
+    <fullyQualifiedTypeName name="org.hibernate.query.Query"/>
+    <fullyQualifiedTypeName name="com.HibernateUtil"/>
+    <fullyQualifiedTypeName name="com.flyaway.entity.admin"/>
+    <fullyQualifiedTypeName name="com.flyaway.entity.place"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
 </qualifiedTypeNameHistroy>

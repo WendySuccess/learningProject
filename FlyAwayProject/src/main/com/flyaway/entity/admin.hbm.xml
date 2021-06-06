@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.flyaway.entity">
+    <class name="admin" table="admin">
+        <id name="idadmin" type="string" column="idadmin">
+        </id>
+        <property name="password" type="string" column="password"/>
+
+    </class>
+    <class name="place" table="place">
+        <id name="idplace" type="string" column="idplace">
+        </id>
+        <property name="placename" type="string" column="placename"/>
+
+    </class>
+</hibernate-mapping>
