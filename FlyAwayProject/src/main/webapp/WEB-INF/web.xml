@@ -53,6 +53,30 @@
   	<description></description>
   	<servlet-class>com.admin.masterPlace</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>SearchFlight</servlet-name>
+  	<display-name>SearchFlight</display-name>
+  	<description></description>
+  	<servlet-class>SearchFlight</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>FlightRegister</servlet-name>
+  	<display-name>FlightRegister</display-name>
+  	<description></description>
+  	<servlet-class>FlightRegister</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>PersonalRegister</servlet-name>
+  	<display-name>PersonalRegister</display-name>
+  	<description></description>
+  	<servlet-class>PersonalRegister</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>PaymentStatus</servlet-name>
+  	<display-name>PaymentStatus</display-name>
+  	<description></description>
+  	<servlet-class>PaymentStatus</servlet-class>
+  </servlet>
     <servlet-mapping>
     <servlet-name>LoginController</servlet-name>
     <url-pattern>/LoginController</url-pattern>
@@ -76,6 +100,22 @@
       <servlet-mapping>
       	<servlet-name>masterPlace</servlet-name>
       	<url-pattern>/masterPlace</url-pattern>
+      </servlet-mapping>
+      <servlet-mapping>
+      	<servlet-name>SearchFlight</servlet-name>
+      	<url-pattern>/SearchFlight</url-pattern>
+      </servlet-mapping>
+      <servlet-mapping>
+      	<servlet-name>FlightRegister</servlet-name>
+      	<url-pattern>/FlightRegister</url-pattern>
+      </servlet-mapping>
+      <servlet-mapping>
+      	<servlet-name>PersonalRegister</servlet-name>
+      	<url-pattern>/PersonalRegister</url-pattern>
+      </servlet-mapping>
+      <servlet-mapping>
+      	<servlet-name>PaymentStatus</servlet-name>
+      	<url-pattern>/PaymentStatus</url-pattern>
       </servlet-mapping>
 
   <welcome-file-list>

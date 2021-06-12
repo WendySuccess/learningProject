@@ -30,7 +30,9 @@ public class LogoutServlet extends HttpServlet {
 		HttpSession session=request.getSession();  
         session.invalidate();           
         PrintWriter out = response.getWriter();
-        out.println("<html><body>");
+        out.println("<html><head>\r\n"
+        		+ "<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\r\n"
+        		+ "</head><body>");
         out.println("<center>Logged out of session.<br></center>");
         out.println("<center><a href='index.jsp'>Back to Login Page</a><br></center>");
         out.println("</body></html>");

@@ -13,6 +13,18 @@
         <id name="idplace" type="string" column="idplace">
         </id>
         <property name="placename" type="string" column="placename"/>
-
+    </class>
+     <class name="airline" table="airline">
+        <id name="idairline" type="string" column="idairline">
+        </id>
+        <property name="airlineName" type="string" column="airlineName"/>
+    </class>
+       <class name="flight" table="flight">
+        <id name="idflight" type="integer" column="idflight">
+        </id>
+        <property name="source" type="string" column="source"/>
+          <property name="destination" type="string" column="destination"/>
+             <property name="airline" type="string" column="airline"/>
+             <property name="price" type="double" column="price"/>
     </class>
 </hibernate-mapping>

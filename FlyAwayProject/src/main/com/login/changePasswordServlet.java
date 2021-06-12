@@ -44,7 +44,7 @@ public class changePasswordServlet extends HttpServlet {
 	        String Result = obj.UpdatePassword( userId, password);
 	        PrintWriter out = response.getWriter();
 			request.getRequestDispatcher("DashBoardServlet").include(request, response);
-			out.println("<span style='color:red'>" + Result+"</span>");
+			out.println("<div align=\"center\"><span style='color:red'>" + Result+"</span></div>");
 	
 	}
 }
