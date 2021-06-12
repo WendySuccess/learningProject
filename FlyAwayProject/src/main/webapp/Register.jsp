@@ -9,9 +9,10 @@
 <title>Register Page</title>
 </head>
 <body>
+<%@ include file="Header.html" %>
+
 <div class="container">	
-	<h2>FlyAway !</h2>
-	<h5>Flight Reservation</h5>
+<h5> Register Personal Details</h5>
 	<form action="PersonalRegister" method="post">
 		<div class="row">
 		  	<div class="col">
@@ -49,5 +50,6 @@
 		</form>
 	
 </div>
+<%@ include file="Footer.html" %>
 </body>
 </html>

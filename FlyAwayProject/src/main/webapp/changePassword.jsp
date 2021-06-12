@@ -10,10 +10,11 @@
 <title>Change your password</title>
 </head>
 <body>
+<%@ include file="Header.html" %>
 	<div class="container">	
 		<div align="center">
-			<h2>Login</h2>
-			<form action="changePasswordServlet" method="post">
+			<h5>Change your password</h5>
+			<form action="ChangePasswordServlet" method="post">
 				<div class="mb-1">
 					<div class="row">
 						<div class="col"></div>
@@ -29,5 +30,6 @@
 			</form>
 		</div>
 	</div>
+<%@ include file="Footer.html" %>
 </body>
 </html>

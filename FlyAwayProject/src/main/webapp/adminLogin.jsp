@@ -8,6 +8,7 @@
 <meta charset="ISO-8859-1">
 <title>Admin Login</title>
 </head>
+<%@ include file="Header.html" %>
 <body>
 	<div align="center">
 		<h2>Login</h2>
@@ -17,5 +18,6 @@
 			<input type="submit" value="Login">
 		</form>
 	</div>
+	<%@ include file="Footer.html" %>
 </body>
 </html>

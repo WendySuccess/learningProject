@@ -5,18 +5,18 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name= "admin")   
-public class admin {
+public class Admin {
 	
    
-    private String idadmin;
+    private String idAdmin;
     private String password;
 
 	public String getIdadmin() {
-		return idadmin;
+		return idAdmin;
 	}
 
 	public void setIdadmin(String idadmin) {
-		this.idadmin = idadmin;
+		this.idAdmin = idadmin;
 	}
 
 	public String getPassword() {

@@ -1,5 +1,5 @@
 
-
+package com.flyaway.Controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -12,9 +12,10 @@ import javax.servlet.http.HttpSession;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 
-import com.HibernateUtil;
-import com.flyaway.entity.flight;
+import com.flyaway.util.HibernateUtil;
+import com.flyaway.entity.Flight;
 
 /**
  * Servlet implementation class PaymentStatus
@@ -38,10 +39,10 @@ public class PaymentStatus extends HttpServlet {
 		
 		
         PrintWriter out = response.getWriter();
-        out.println("<html><head>\r\n"
-        		+ "<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\r\n"
-        		+ "</head><body>");
-        out.println("<center><h1>Comfirm Flight Details</h1></center><div class=\"container\">	");
+        out.println("<html><head> <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\"> " 
+        		+ "</head><body><style>header {width: 100%;height: 110px;background-color: #0683c9;}header nav {display: block;float: none;height: 30px;text-align: right; margin: 0 auto; }header nav a {color: white; } header nav a:hover {color: white; }#info-bar {background-color: #3cb5f9;   position:fixed; bottom:0; width: 100%; }</style>");
+        out.println( "   <header> <div class=\"container clearfix\"> <h1 id=\"logo\">FlyAway !</h1> <h5>Your Airline Booking Portal</h5><nav> <a href=\"adminLogin.jsp\">Admin Login</a> </nav>    </div></header></center><div class=\"container\">	");
+      
      
 		   HttpSession session=request.getSession(false);  
 		   String userId = null;
@@ -54,12 +55,18 @@ public class PaymentStatus extends HttpServlet {
 	                 SessionFactory factory = HibernateUtil.getSessionFactory();
 	                 
 	                 Session session1 = factory.openSession();
-	                  List<flight> list3   = session1.createQuery("from flight").list();
-	                  out.println("<div class=\"container\">	Success Payment <br>");
+	                 
+	                 Query query = session1.createQuery("from Flight where idFlight = :id");
+	      
+	     			query.setParameter("id",userId);
+	     			List<Flight> list3   = query.list();
+	                 
+	                  //List<Flight> list3   = session1.createQuery("from Flight").list();
+	                  out.println("	<h5>Success Payment <br></h5>");
 	                  out.println("Below is your booked Flight Details <br>");
 	     			 //out.println("<table class=\"table table-bordered table-sm\">");
 	     	               
-	                  for( flight f: list3) {
+	                  for( Flight f: list3) {
 	                     	 
 	                 	 	//out.println(" <tr>");
 	                     	out.println("<div class=\\\"row\\\"><div class=\\\"col\\\">ID: " + String.valueOf( f.getIdflight()) + "</br></div></div>"
@@ -86,5 +93,6 @@ public class PaymentStatus extends HttpServlet {
 	                  throw ex;
 	          }
 	}
+	        out.println("</div><div id=\"info-bar\"><div><span><a href=\"\">CopyRight 2021 </a></span></div></div></footer></body></html>");
 
 	}}

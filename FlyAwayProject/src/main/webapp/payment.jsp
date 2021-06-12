@@ -10,19 +10,16 @@
 </head>
 <body>
 
-<div align="center">
-	<h2>FlyAway !</h2>
-	<h5>Payment Details</h5>
-
-</div>
+<%@ include file="Header.html" %>
 
 <div class="container">	
+<h5> Payment Information</h5>
 	<form action="PaymentStatus" method="post">
 		<div class="row">
 		  	<div class="col">
 		 		<div class="mb-1">
 		 			<label for="lblDateoftravel" class="form-label">Credit Card Number </label>
-					<input type="date" name="Dateoftravel" class="form-control"  required/><br/>
+					<input type="number" name="Dateoftravel" class="form-control"  required/><br/>
 				</div>
   			</div>
   			<div class="col"></div>
@@ -42,6 +39,6 @@
 		</form>
 		</div>
 
-
+<%@ include file="Footer.html" %>
 </body>
 </html>

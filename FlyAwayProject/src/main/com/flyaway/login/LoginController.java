@@ -1,4 +1,4 @@
-package com.login;
+package com.flyaway.login;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,8 +19,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 
-import com.flyaway.entity.admin;
-import com.HibernateUtil;
+import com.flyaway.entity.Admin;
+import com.flyaway.util.HibernateUtil;
 
 
 /**
@@ -55,12 +55,12 @@ public class LoginController extends HttpServlet {
 	
 		
 			RequestDispatcher rd = null;
-			Query query = session.createQuery("from admin where idadmin = :id ");
+			Query query = session.createQuery("from Admin where idAdmin = :id ");
 			query.setParameter("id",emailID);
-			List<admin> list1 = query.list();
+			List<Admin> list1 = query.list();
 			
 
-			for(admin p: list1) {
+			for(Admin p: list1) {
 				matchid = String.valueOf(p.getIdadmin());
 				matchpassword = String.valueOf(p.getPassword());
 			}

@@ -1,14 +1,13 @@
+
 <html>
+
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-<div align="center">
-	<h2>FlyAway !</h2>
-	<h5>Your Airline Booking Portal</h5>
-	<a href="admindetails">Admin List</a>
-	<a href="adminLogin.jsp">Admin Login</a>
-</div>
+
+<%@ include file="Header.html" %>
+
 <div class="container">	
 	<form action="SearchFlight" method="post">
 		<div class="row">
@@ -45,5 +44,7 @@
 		</form>
 
 		</div>
+		
+<%@ include file="Footer.html" %>
 </body>
 </html>

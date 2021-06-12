@@ -4,15 +4,15 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name= "airline")   
-public class airline  {
-    private String idairline;
+public class Airline  {
+    private String idAirline;
     private String airlineName;
     
 	public String getIdairline() {
-		return idairline;
+		return idAirline;
 	}
 	public void setIdairline(String idairline) {
-		this.idairline = idairline;
+		this.idAirline = idairline;
 	}
 	public String getAirlineName() {
 		return airlineName;

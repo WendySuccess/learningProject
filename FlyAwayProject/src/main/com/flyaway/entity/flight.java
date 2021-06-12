@@ -7,18 +7,18 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name= "flight")   
-public class flight implements Comparable<flight> {
-    private int idflight;
+public class Flight implements Comparable<Flight> {
+    private int idFlight;
     private String source;
     private String  destination;
     private String  airline;
     private Double price;
     
 	public int getIdflight() {
-		return idflight;
+		return idFlight;
 	}
 	public void setIdflight(int idflight) {
-		this.idflight = idflight;
+		this.idFlight = idflight;
 	}
 	public String getSource() {
 		return source;
@@ -45,9 +45,8 @@ public class flight implements Comparable<flight> {
 		this.price = price;
 	}
 	@Override
-	public int compareTo(flight o) {
-		// TODO Auto-generated method stub
-		return this.idflight - o.getIdflight();
+	public int compareTo(Flight o) {
+		return 0;
 	}
-
+	
 }

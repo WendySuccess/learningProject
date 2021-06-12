@@ -1,4 +1,4 @@
-package com;
+package com.flyaway.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;

@@ -8,83 +8,64 @@
   <filter-name>AuthenticationFilter</filter-name>
     <display-name>AuthenticationFilter</display-name>
 	<description></description>
-    <filter-class>AuthenticationFilter</filter-class>
+    <filter-class>com.flyaway.Controller.AuthenticationFilter</filter-class>
   </filter>
-  
   <filter-mapping>
     <filter-name>AuthenticationFilter</filter-name>
     <servlet-name>LoginController</servlet-name>
   </filter-mapping>
-  
   <servlet>   
     <servlet-name>DashBoardServlet</servlet-name>
     <display-name>DashBoardServlet</display-name>
     <description></description>
-    <servlet-class>DashBoardServlet</servlet-class>
+    <servlet-class>com.flyaway.Controller.DashBoardServlet</servlet-class>
   </servlet>
-  
   <servlet>
     <servlet-name>LogoutServlet</servlet-name>
     <display-name>LogoutServlet</display-name>
     <description></description>
-    <servlet-class>LogoutServlet</servlet-class>
+    <servlet-class>com.flyaway.Controller.LogoutServlet</servlet-class>
   </servlet>
-  <servlet>
- 		<servlet-name>admindetails</servlet-name>
- 		<display-name>admindetails</display-name>
- 		<description></description>
- 		<servlet-class>admindetails</servlet-class>
- 	</servlet>
  <servlet>
     <servlet-name>LoginController</servlet-name>
     <display-name>LoginController</display-name>
     <description></description>
-    <servlet-class>com.login.LoginController</servlet-class>
+    <servlet-class>com.flyaway.login.LoginController</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>changePasswordServlet</servlet-name>
-  	<display-name>changePasswordServlet</display-name>
+  	<servlet-name>ChangePasswordServlet</servlet-name>
+  	<display-name>ChangePasswordServlet</display-name>
   	<description></description>
-  	<servlet-class>com.login.changePasswordServlet</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>masterPlace</servlet-name>
-  	<display-name>masterPlace</display-name>
-  	<description></description>
-  	<servlet-class>com.admin.masterPlace</servlet-class>
+  	<servlet-class>com.flyaway.login.ChangePasswordServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>SearchFlight</servlet-name>
   	<display-name>SearchFlight</display-name>
   	<description></description>
-  	<servlet-class>SearchFlight</servlet-class>
+  	<servlet-class>com.flyaway.Controller.SearchFlight</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>FlightRegister</servlet-name>
   	<display-name>FlightRegister</display-name>
   	<description></description>
-  	<servlet-class>FlightRegister</servlet-class>
+  	<servlet-class>com.flyaway.Controller.FlightRegister</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>PersonalRegister</servlet-name>
   	<display-name>PersonalRegister</display-name>
   	<description></description>
-  	<servlet-class>PersonalRegister</servlet-class>
+  	<servlet-class>com.flyaway.Controller.PersonalRegister</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>PaymentStatus</servlet-name>
   	<display-name>PaymentStatus</display-name>
   	<description></description>
-  	<servlet-class>PaymentStatus</servlet-class>
+  	<servlet-class>com.flyaway.Controller.PaymentStatus</servlet-class>
   </servlet>
     <servlet-mapping>
     <servlet-name>LoginController</servlet-name>
     <url-pattern>/LoginController</url-pattern>
   </servlet-mapping>
-    <servlet-mapping>
-    	<servlet-name>admindetails</servlet-name>
-    	<url-pattern>/admindetails</url-pattern>
-    </servlet-mapping>
       <servlet-mapping>
     <servlet-name>DashBoardServlet</servlet-name>
     <url-pattern>/DashBoardServlet</url-pattern>
@@ -94,13 +75,10 @@
     <url-pattern>/LogoutServlet</url-pattern>
   </servlet-mapping>
       <servlet-mapping>
-      	<servlet-name>changePasswordServlet</servlet-name>
-      	<url-pattern>/changePasswordServlet</url-pattern>
+      	<servlet-name>ChangePasswordServlet</servlet-name>
+      	<url-pattern>/ChangePasswordServlet</url-pattern>
       </servlet-mapping>
-      <servlet-mapping>
-      	<servlet-name>masterPlace</servlet-name>
-      	<url-pattern>/masterPlace</url-pattern>
-      </servlet-mapping>
+
       <servlet-mapping>
       	<servlet-name>SearchFlight</servlet-name>
       	<url-pattern>/SearchFlight</url-pattern>

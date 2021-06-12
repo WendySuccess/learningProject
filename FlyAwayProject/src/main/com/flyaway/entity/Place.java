@@ -5,20 +5,20 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name= "place")   
-public class place {
-    private String idplace;
-    private String placename;
+public class Place {
+    private String idPlace;
+    private String placeName;
     
 	public String getIdplace() {
-		return idplace;
+		return idPlace;
 	}
 	public void setIdplace(String idplace) {
-		this.idplace = idplace;
+		this.idPlace = idplace;
 	}
 	public String getPlacename() {
-		return placename;
+		return placeName;
 	}
 	public void setPlacename(String placename) {
-		this.placename = placename;
+		this.placeName = placename;
 	}
 }

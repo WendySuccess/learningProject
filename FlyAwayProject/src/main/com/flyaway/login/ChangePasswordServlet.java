@@ -1,4 +1,4 @@
-package com.login;
+package com.flyaway.login;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -16,13 +16,13 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class changePasswordServlet
  */
-public class changePasswordServlet extends HttpServlet {
+public class ChangePasswordServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public changePasswordServlet() {
+    public ChangePasswordServlet() {
         super();
         // TODO Auto-generated constructor stub
     }

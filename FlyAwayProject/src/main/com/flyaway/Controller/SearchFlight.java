@@ -1,5 +1,5 @@
 
-
+package com.flyaway.Controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Collections;
@@ -16,11 +16,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 
-import com.HibernateUtil;
-import com.flyaway.entity.admin;
-import com.flyaway.entity.airline;
-import com.flyaway.entity.flight;
-import com.flyaway.entity.place;
+import com.flyaway.util.HibernateUtil;
+import com.flyaway.entity.Admin;
+import com.flyaway.entity.Airline;
+import com.flyaway.entity.Flight;
+import com.flyaway.entity.Place;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -51,19 +51,20 @@ public class SearchFlight extends HttpServlet {
 		String source=request.getParameter("Source");
 		System.out.println(destination + ' ' + source);
 		request.getRequestDispatcher("index.jsp").include(request, response);
+		 out.println("<div class=\"container\">");
 		
 		 try {
              SessionFactory factory = HibernateUtil.getSessionFactory();
              
              Session session1 = factory.openSession();
-             Query query = session1.createQuery("from flight where destination = :destination and source = :source");
+             Query query = session1.createQuery("from Flight where destination = :destination and source = :source");
   
  			query.setParameter("destination",destination);
  			query.setParameter("source",source);
- 			List<flight> list3   = query.list();
+ 			List<Flight> list3   = query.list();
  			Collections.sort(list3);
  			
- 			 out.println("<div class=\"container\">	Master list of airlines<br>");
+ 			 
  			if (list3.size()<1)
  			{
  				 out.println("No Result for this selection <br>");
@@ -74,7 +75,7 @@ public class SearchFlight extends HttpServlet {
             
  			 out.println("<table class=\"table table-bordered table-sm\">");
  	               
-              for( flight f: list3) {
+              for( Flight f: list3) {
                  	 
              	 	out.println(" <tr>");
                  	out.println("<td>ID: " + String.valueOf( f.getIdflight()) 

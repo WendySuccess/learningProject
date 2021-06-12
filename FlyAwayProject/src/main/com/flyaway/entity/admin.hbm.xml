@@ -3,23 +3,23 @@
 "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="com.flyaway.entity">
-    <class name="admin" table="admin">
+    <class name="Admin" table="admin">
         <id name="idadmin" type="string" column="idadmin">
         </id>
         <property name="password" type="string" column="password"/>
 
     </class>
-    <class name="place" table="place">
+    <class name="Place" table="place">
         <id name="idplace" type="string" column="idplace">
         </id>
         <property name="placename" type="string" column="placename"/>
     </class>
-     <class name="airline" table="airline">
+     <class name="Airline" table="airline">
         <id name="idairline" type="string" column="idairline">
         </id>
         <property name="airlineName" type="string" column="airlineName"/>
     </class>
-       <class name="flight" table="flight">
+       <class name="Flight" table="flight">
         <id name="idflight" type="integer" column="idflight">
         </id>
         <property name="source" type="string" column="source"/>

@@ -1,4 +1,4 @@
-package com.login;
+package com.flyaway.login;
 
 import java.math.BigDecimal;
 
@@ -10,7 +10,7 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-import com.flyaway.entity.admin;
+import com.flyaway.entity.Admin;
 
 
 public class LoginService {
@@ -24,7 +24,7 @@ public class LoginService {
 		
 	    Transaction t=session.beginTransaction();  
 	      
-	    admin e1=new  admin();  
+	    Admin e1=new  Admin();  
 	    e1.setIdadmin(id);
 	    e1.setPassword(password);
 	    session.saveOrUpdate(e1);
